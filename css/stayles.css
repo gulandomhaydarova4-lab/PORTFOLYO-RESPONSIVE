@@ -1,0 +1,280 @@
+:root {
+	--bg-color: #000;
+	--title-color: #fff;
+	--text-color: #c7c7c7;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+}
+ul,
+ol {
+	list-style: none;
+}
+body {
+	background-color: var(--bg-color);
+	color: var(--text-color);
+}
+
+.container {
+	max-width: 1264px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.site-header {
+	padding-top: 24px;
+	padding-bottom: 24px;
+}
+.site-header__container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.logo {
+	display: flex;
+	font-weight: 400;
+	font-size: 32px;
+	line-height: 150%;
+	letter-spacing: -1%;
+	color: var(--text-color);
+}
+.site-header__list {
+	display: flex;
+	gap: 32px;
+}
+
+.site-header__link {
+	position: relative;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: -3%;
+	color: var(--text-color);
+	transition: color 0.3s ease;
+}
+
+/* underline (hidden holat) */
+.site-header__link::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -4px;
+	width: 100%;
+	height: 2px;
+	background-color: #f58c02;
+
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.3s ease;
+}
+
+/* hover payti chiqadi */
+.site-header__link:hover::after {
+	transform: scaleX(1);
+}
+
+/* optional: rang ham o'zgaradi */
+.site-header__link:hover {
+	color: #f58c02;
+}
+.menu-btn {
+	display: none;
+}
+
+/* HERO STRAT */
+.hero {
+	padding-top: 30px;
+	padding-bottom: 80px;
+}
+.hero__container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap:20px ;
+}
+
+.hero__info {
+	max-width: 544px;
+	width: 100%;
+}
+.hero__title {
+	font-family: Bebas Neue;
+	font-weight: 400;
+	font-size: 80px;
+	line-height: 90%;
+	margin-bottom: 8px;
+	color: var(--title-color);
+	text-transform: uppercase;
+}
+.hero__text {
+	font-family: Manrope;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 150%;
+	margin-bottom: 40px;
+}
+.hero__inner {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+.hero__link {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 25px;
+	padding: 19px 19px 19px 24px;
+	background-color: #d3e97a;
+	border-radius: 100px;
+	color: #0A0A0A;
+	font-family: Manrope;
+	font-weight: 700;
+	font-style: Bold;
+	font-size: 16px;
+	line-height: 100%;
+	text-transform: uppercase;
+}
+.hero__link span{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-color: #0A0A0A;
+	border-radius: 50%;
+}
+.hero__social {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+.hero__social a{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 56px;
+	height: 56px;
+	background-color:#222222 ;
+	border-radius: 50%;
+
+}
+.hero__img {
+max-width: 600px;
+width: 100%;
+}
+
+.hero__img img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+/* HERO END */
+
+/* MEADI START */
+@media screen and (max-width: 1024px) {
+/* HERO START */
+.hero__info {
+	max-width: 480px;
+}
+.hero__title {
+	font-size: 64px;
+}
+}
+/* HERO END */
+
+/* HEADER START */
+@media screen and (max-width: 768px) {
+	.logo {
+		font-size: 28px;
+	}
+	.site-header__list {
+		gap: 24px;
+	}
+
+	.site-header__link {
+		font-size: 14px;
+	}
+	/* HERO STAR */
+	.hero {
+	padding-top: 40px;
+	padding-bottom: 64px;
+}
+
+
+.hero__info {
+	max-width: 48%;
+}
+.hero__title {
+	font-size: 48px;
+}
+.hero__text {
+	font-size: 16px;
+	margin-bottom: 36px;
+}
+.hero__inner {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+.hero__link {
+  gap: 12px;
+	padding: 4px 5px 4px 16px;
+	font-size: 14px;
+}
+.hero__link span{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+
+}
+
+.hero__social a{
+	width: 54px;
+	height: 54px;
+
+}
+.hero__img {
+max-width: 600px;
+width: 100%;
+}
+/* HERO END */
+}
+@media screen and (max-width: 580px){
+.hero__container{
+	flex-direction: column;
+}
+.hero__info{
+	max-width: 100%;
+}
+.hero__title{
+	font-size: 57px;
+}
+.hero__img{
+max-width: 100%;
+}
+}
+
+@media screen and (max-width: 470px) {
+	.site-header__list {
+		display: none;
+	}
+	.logo {
+		font-size: 24px;
+	}
+	.menu-btn {
+		display: block;
+		background-color: transparent;
+		border: none;
+	}
+	.hero__title{
+	font-size: 48px;
+}
+}
+/* HEADER END */
+/* MEDIA END */
