@@ -9,6 +9,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 a {
 	text-decoration: none;
@@ -295,6 +296,58 @@ body {
 	padding-bottom: 4px;
 }
 /* Featured end */
+/* ABOUT ME START */
+.abaut-me {
+	border-top: 1px solid #484848 ;
+	padding-top: 122px;
+	padding-bottom: 391px;
+}
+
+.about-me__container {
+	display: flex;
+	justify-content: space-between;
+	gap: 40px;
+}
+
+.abaut-me__title {
+	font-family: Bebas Neue;
+	font-weight: 400;
+	font-size: 101px;
+	line-height: 90%;
+	color: var(--title-color);
+	text-transform: uppercase;
+}
+.abaut-me__info {
+	max-width: 704px;
+	width: 100%;
+}
+.abaut-me__title3 {
+	margin-bottom: 16px;
+	font-family: Manrope;
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 140%;
+}
+
+.abaut-me__text {
+	margin-bottom: 53px;
+	font-family: Manrope;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 150%;
+}
+.abaut-me__link {
+	font-family: Manrope;
+	font-weight: 700;
+	font-style: Bold;
+	font-size: 16px;
+	line-height: 150%;
+	text-transform: uppercase;
+	color: var(--primary-color);
+	padding-bottom: 4px;
+	border-bottom: 2px solid var(--primary-color);
+}
+/* ABOUT ME END */
 
 /* MEADI START */
 @media screen and (max-width: 1024px) {
@@ -349,6 +402,11 @@ body {
 		margin-bottom: 40px;
 	}
 	/* Featured end */
+	/* About Me Start */
+	.abaut-me__title {
+	font-size: 80px;
+}
+	/* About Me end */
 }
 /* HEADER START */
 @media screen and (max-width: 768px) {
@@ -418,6 +476,33 @@ body {
 	}
 
 	/* Featured end */
+	/* ABOUT ME START */
+.abaut-me {
+	padding-top: 0;
+	padding-bottom:64px;
+}
+
+.about-me__container {
+
+	gap: 0;
+}
+.abaut-me__title {
+display: none;
+}
+.abaut-me__info {
+	width: 100%;
+}
+.abaut-me__title3 {
+
+	font-size: 24px;
+}
+
+.abaut-me__text {
+	margin-bottom: 24px;
+	font-size: 16px;
+}
+
+/* ABOUT ME END */
 }
 @media screen and (max-width: 580px) {
 	.hero__container {
